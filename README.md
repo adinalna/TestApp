@@ -13,6 +13,9 @@ extension=pdo_pgsql
 extension=pdo_sqlite
 extension=pgsql
 
+![image](https://github.com/adinalna/TestApp/assets/83740348/9e3a6554-765b-48cb-a322-48c76f28ac34)
+
+
 2. Create laravel project (Laravel Doc: https://laravel.com/docs/9.x)
 - go to cmd
 - composer create-project laravel/laravel [APP NAME]
