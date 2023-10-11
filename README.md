@@ -1,4 +1,6 @@
-Laravel & Supabase (postgresql) Tutorial
+To clone this repo, follow this: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+
+**Laravel & Supabase (postgresql) Tutorial**
 
 Install:
 1. Xampp or PHP https://www.apachefriends.org/download.html
