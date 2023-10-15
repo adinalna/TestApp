@@ -18,3 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/test-db', [App\Http\Controllers\TestController::class, 'testConnection']);
+
+Route::prefix('users')->group(function () {
+    Route::get('', [App\Http\Controllers\IndexController::class, 'showTable']);
+    Route::post('/add',  [App\Http\Controllers\IndexController::class, 'addUser']);
+    Route::get('{id}/edit', [App\Http\Controllers\IndexController::class, 'editUser']);
+    Route::put('{id}/update', [App\Http\Controllers\IndexController::class, 'addUser']);;
+    Route::delete('{id}/delete', [App\Http\Controllers\IndexController::class, 'adddelete']);;
+});

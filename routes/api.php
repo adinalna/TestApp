@@ -18,4 +18,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test-database-connection', 'DatabaseController@testConnection');
+Route::prefix('users')->group(function () {
+    Route::get('/all', [App\Http\Controllers\Api\UserController::class, 'showTable']);
+    Route::post('/add', [App\Http\Controllers\Api\UserController::class, 'addUser']);
+    Route::put('{id}/update', [App\Http\Controllers\Api\UserController::class, 'updateUser']);
+    Route::delete('{id}/delete', [App\Http\Controllers\Api\UserController::class, 'deleteUser']);
+});
+
+
+

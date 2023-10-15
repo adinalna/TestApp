@@ -1,4 +1,4 @@
-Laravel & Supabase (postgresql) Tutorial
+PART 1: Laravel & Supabase (postgresql) Tutorial
 
 Install:
 1. Xampp or PHP https://www.apachefriends.org/download.html
@@ -11,10 +11,14 @@ extension=pdo_pgsql
 extension=pdo_sqlite
 extension=pgsql
 
-2. Create laravel project (Laravel Doc: https://laravel.com/docs/9.x)
+2. Create laravel project (Laravel Doc: https://lara vel.com/docs/10.x)
 - go to cmd
+
+Type in cmd:
 - composer create-project laravel/laravel [APP NAME]
 - open project in ide
+
+In Laravel ProjectZ:
 - database.php file:
  'default' => env('DB_CONNECTION', 'pgsql'),
 
@@ -32,9 +36,9 @@ DB_PASSWORD=fowlboysandgirls
 - in web.php, create test route: 
 Route::get('/test-db', [App\Http\Controllers\TestController::class, 'testConnection']);
 
-- In Terminal, create controller. Type:php artisan make:controller TestController
+- To create controller. In Terminal, type: php artisan make:controller TestController
 
-- In TestControlle, add function:
+- In TestController, add function:
 public function testConnection()
 {
     try {
@@ -45,15 +49,44 @@ public function testConnection()
     }
 }
 
-- In Terminal, run project locally. Type:php artisan serve
+- To run project locally. In Terminal, type: php artisan serve. "Server running on [http://127.0.0.1:8000]" should show, click to see the project.
 
-- in URL add: /test-db to test db connection
+- in URL add: /test-db to test db connection. For exp: http://127.0.0.1:8000/test-db
 
 
 3.Create simple database table
-- In the database/migrations directory, delete the default create_users_table file migration
-- In Terminal, Type: php artisan make:migration create_users_table. This will create a new migration file in the database/migrations directory. You can edit table columns here.
+- In Terminal, Type: php artisan make:migration create_adina_table, put your name to test it out. This will create a new migration file in the database/migrations directory. You can edit table columns here. 
 - In Terminal, Type: php artisan migrate, the table should show up in supabase ;)
 
+Part 2: GitHub and Laravel Tutorial
+
+This part is to get the TestApp from GitHub and do simple Laravel CRUD in your own git branch.
+
+1. Clone TestApp from Github
+- got to cmd
+- cmd into a folder you want the project to be in.
+
+Type: 
+git clone https://github.com/adinalna/TestApp.git
+now the app should be in cloned to your local
+
+2. Create your own Git branch
+
+In terminal of cloned project, Type:
+- git branch
+
+You will see all the branches available, to create your own branch type: 
+- git checkout -b ＜type-new-branch-name＞
+- git push or git push --set-upstream origin ＜type-new-branch-name＞
 
 
+You are now in your own git branch yay
+
+3. CRUD Tutorial with MVC
+
+npm create vite
+cd react
+npm i
+npm install react-router-dom -s
+npm install axios
+composer require fruitcake/laravel-cors
